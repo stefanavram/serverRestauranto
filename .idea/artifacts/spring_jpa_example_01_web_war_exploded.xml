@@ -51,6 +51,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.39" />
+          <element id="library" level="project" name="Maven: postgresql:postgresql:9.0-801.jdbc4" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:1.4.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.4.1.RELEASE" />
