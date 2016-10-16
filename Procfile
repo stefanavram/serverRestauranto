@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* spring-jpa-example-01
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* PizzaSpringApplication
