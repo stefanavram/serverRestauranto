@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-jpa-example-01.iml" filepath="$PROJECT_DIR$/spring-jpa-example-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/spring-jpa-example-01-service.iml" filepath="$PROJECT_DIR$/service/spring-jpa-example-01-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/spring-jpa-example-01-web.iml" filepath="$PROJECT_DIR$/web/spring-jpa-example-01-web.iml" />
+    </modules>
+  </component>
+</project>
