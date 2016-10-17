@@ -22,12 +22,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="spring-jpa-example-01" />
         <module name="spring-jpa-example-01-service" />
         <module name="spring-jpa-example-01-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-jpa-example-01" target="1.5" />
+      <module name="common" target="1.8" />
+      <module name="common (1)" target="1.8" />
+      <module name="common (1) (ro.irian.fullstack.spring-common)" target="1.8" />
+      <module name="deploy" target="1.8" />
+      <module name="spring-jpa-example-01" target="1.8" />
       <module name="spring-jpa-example-01-service" target="1.8" />
       <module name="spring-jpa-example-01-web" target="1.8" />
     </bytecodeTargetLevel>

@@ -4,6 +4,7 @@
 .idea/dataSources.local.xml
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/
 service/.DS_Store
 service/src/.DS_Store
 service/src/main/.DS_Store
