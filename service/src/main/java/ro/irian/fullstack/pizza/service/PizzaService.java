@@ -1,8 +1,10 @@
 package ro.irian.fullstack.pizza.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
+import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 import ro.irian.fullstack.pizza.service.exception.PizzaNotFoundException;
 
 import java.util.List;
@@ -19,7 +21,6 @@ public class PizzaService {
     @Autowired
     private PizzaRepository pizzaRepository;
 
-
     public List<PizzaEntity> getAllPizzas() {
         return pizzaRepository.findAll();
     }
@@ -31,5 +32,10 @@ public class PizzaService {
         } else {
             throw new PizzaNotFoundException("Pizza with id: " + pizzaId + " not found!");
         }
+    }
+
+
+    public List<ReviewEntity> getAllReviews(String pizzaId) {
+        pizzaRepository.findAllReviews(pizzaId);
     }
 }

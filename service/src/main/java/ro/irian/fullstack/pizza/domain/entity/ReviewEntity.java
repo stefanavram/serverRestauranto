@@ -1,10 +1,11 @@
 package ro.irian.fullstack.pizza.domain.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
- * @author Cristi Toth
+ * @author Stefan Avram
  */
 @Entity
 @Table(name = "review")
@@ -18,6 +19,8 @@ public class ReviewEntity extends BaseEntity{
 
     private Long createdOn;
 
+    @ManyToOne
+    private PizzaEntity pizza;
 
     public void prePersist(){
         super.prePersist();

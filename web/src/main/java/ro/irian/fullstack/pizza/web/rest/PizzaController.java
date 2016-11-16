@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
+import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 import ro.irian.fullstack.pizza.service.PizzaService;
 
 import java.util.List;
@@ -34,5 +35,10 @@ public class PizzaController {
     @RequestMapping(value = "/{id}", method = {RequestMethod.GET})
     public PizzaEntity findPizza(@PathVariable("id") String pizzaId) {
         return pizzaService.findPizza(pizzaId);
+    }
+
+    @RequestMapping(value ="/addReview/{id}", )
+    public ReviewEntity addReview(@PathVariable("id") String pizzaId){
+        return pizzaService.findPizza()
     }
 }
