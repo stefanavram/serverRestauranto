@@ -16,10 +16,6 @@ import java.util.List;
 
 
 @Repository
-interface PizzaRepository extends JpaRepository<PizzaEntity, String>, Repository {
+interface PizzaRepository extends JpaRepository<PizzaEntity, String> {
 
-    @Modifying
-    @Transactional
-    @Query("select r from ReviewEntity where r. ")
-    List<ReviewEntity> findAllReviews(String pizzaId);
 }

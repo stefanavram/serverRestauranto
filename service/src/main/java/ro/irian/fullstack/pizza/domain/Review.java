@@ -10,6 +10,8 @@ public class Review {
     private String author;
     private Long createdOn;
 
+    public Review() {
+    }
 
     public Review(Integer stars, String body, String author, Long createdOn) {
         this.stars = stars;

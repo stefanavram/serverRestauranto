@@ -26,7 +26,7 @@ public class PizzaEntity extends BaseEntity {
 
     private Boolean soldOut = false;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.LAZY, mappedBy = "pizza")
     private List<ReviewEntity> reviews;
 
 
@@ -94,7 +94,7 @@ public class PizzaEntity extends BaseEntity {
     }
 
     public boolean isSoldOut() {
-        return soldOut;
+        return (soldOut == null) ? false : soldOut;
     }
 
     public void setSoldOut(boolean soldOut) {

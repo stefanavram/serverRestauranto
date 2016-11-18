@@ -9,6 +9,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+import ro.irian.fullstack.pizza.service.TestdataService;
 
 @Component
 @Order(10)
@@ -30,7 +31,8 @@ public class WebApplicationListener implements ApplicationListener<ContextRefres
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         LOG.info("Application context initialized !");
-
+//        TestdataService testdataService = applicationContext.getBean(TestdataService.class);
+//        testdataService.createTestdata();
     }
 
 }

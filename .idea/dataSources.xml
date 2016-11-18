@@ -19,7 +19,7 @@
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-54-75-228-83.eu-west-1.compute.amazonaws.com:5432/df03eh7st94hgi?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ec2-54-75-233-142.eu-west-1.compute.amazonaws.com:5432/dnqo95eofng94?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</jdbc-url>
     </data-source>
   </component>
 </project>

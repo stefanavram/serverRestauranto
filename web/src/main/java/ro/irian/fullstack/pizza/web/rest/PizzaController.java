@@ -2,22 +2,21 @@ package ro.irian.fullstack.pizza.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import ro.irian.fullstack.pizza.domain.Review;
 import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
 import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 import ro.irian.fullstack.pizza.service.PizzaService;
+import ro.irian.fullstack.pizza.service.ReviewRepository;
+import ro.irian.fullstack.pizza.service.transformers.ReviewTransformer;
 
 import java.util.List;
 
 /**
  * REST service for pizzas.
- *
- *
  */
+
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/rest/pizzas")
 public class PizzaController {
@@ -25,7 +24,8 @@ public class PizzaController {
 
     @Autowired
     private PizzaService pizzaService;
-
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     @RequestMapping(method = {RequestMethod.GET})
     public List<PizzaEntity> getAllPizzas() {
@@ -37,8 +37,12 @@ public class PizzaController {
         return pizzaService.findPizza(pizzaId);
     }
 
-    @RequestMapping(value ="/addReview/{id}", )
-    public ReviewEntity addReview(@PathVariable("id") String pizzaId){
-        return pizzaService.findPizza()
+    @RequestMapping(value = "/addReview/{id}", method = {RequestMethod.POST})
+    public void addReview(@PathVariable("id") String pizzaId, @RequestBody Review review) {
+
+        ReviewEntity r = ReviewTransformer.transformToEntity(review);
+        r.setPizza(pizzaService.findPizza(pizzaId));
+
+        reviewRepository.save(r);
     }
 }

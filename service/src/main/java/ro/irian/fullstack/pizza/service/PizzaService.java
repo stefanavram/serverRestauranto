@@ -20,8 +20,11 @@ public class PizzaService {
 
     @Autowired
     private PizzaRepository pizzaRepository;
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     public List<PizzaEntity> getAllPizzas() {
+
         return pizzaRepository.findAll();
     }
 
@@ -35,7 +38,7 @@ public class PizzaService {
     }
 
 
-    public List<ReviewEntity> getAllReviews(String pizzaId) {
-        pizzaRepository.findAllReviews(pizzaId);
-    }
+//    public List<ReviewEntity> getAllReviews(String pizzaId) {
+//        return reviewRepository.findAllReviewsByPizzaId(pizzaId);
+//    }
 }

@@ -1,6 +1,9 @@
 package ro.irian.fullstack.pizza.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -9,7 +12,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "review")
-public class ReviewEntity extends BaseEntity{
+public class ReviewEntity extends BaseEntity {
 
     private Integer stars;
 
@@ -19,10 +22,12 @@ public class ReviewEntity extends BaseEntity{
 
     private Long createdOn;
 
+    @JsonIgnore
     @ManyToOne
+    @JoinColumn(name = "pizza_id", referencedColumnName = "id")
     private PizzaEntity pizza;
 
-    public void prePersist(){
+    public void prePersist() {
         super.prePersist();
         this.createdOn = System.currentTimeMillis();
     }
@@ -59,4 +64,13 @@ public class ReviewEntity extends BaseEntity{
     public void setCreatedOn(Long createdOn) {
         this.createdOn = createdOn;
     }
+
+    public PizzaEntity getPizza() {
+        return pizza;
+    }
+
+    public void setPizza(PizzaEntity pizza) {
+        this.pizza = pizza;
+    }
+
 }
