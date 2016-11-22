@@ -16,7 +16,7 @@ import java.util.List;
  * REST service for pizzas.
  */
 
-@CrossOrigin(origins = "http://localhost:4200")
+
 @RestController
 @RequestMapping("/rest/pizzas")
 public class PizzaController {
