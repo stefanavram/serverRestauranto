@@ -1,14 +1,11 @@
 package ro.irian.fullstack.pizza.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ro.irian.fullstack.pizza.domain.Review;
 import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
-import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 import ro.irian.fullstack.pizza.service.PizzaService;
-import ro.irian.fullstack.pizza.service.ReviewRepository;
-import ro.irian.fullstack.pizza.service.transformers.ReviewTransformer;
+import ro.irian.fullstack.pizza.service.ReviewService;
 
 import java.util.List;
 
@@ -23,9 +20,9 @@ public class PizzaController {
 
 
     @Autowired
-    private PizzaService pizzaService;
+    private ReviewService reviewService;
     @Autowired
-    private ReviewRepository reviewRepository;
+    private PizzaService pizzaService;
 
     @RequestMapping(method = {RequestMethod.GET})
     public List<PizzaEntity> getAllPizzas() {
@@ -39,10 +36,7 @@ public class PizzaController {
 
     @RequestMapping(value = "/addReview/{id}", method = {RequestMethod.POST})
     public void addReview(@PathVariable("id") String pizzaId, @RequestBody Review review) {
+        reviewService.addReview(pizzaId, review);
 
-        ReviewEntity r = ReviewTransformer.transformToEntity(review);
-        r.setPizza(pizzaService.findPizza(pizzaId));
-
-        reviewRepository.save(r);
     }
 }

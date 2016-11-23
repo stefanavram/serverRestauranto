@@ -20,8 +20,7 @@ public class PizzaService {
 
     @Autowired
     private PizzaRepository pizzaRepository;
-    @Autowired
-    private ReviewRepository reviewRepository;
+
 
     public List<PizzaEntity> getAllPizzas() {
 
@@ -36,9 +35,4 @@ public class PizzaService {
             throw new PizzaNotFoundException("Pizza with id: " + pizzaId + " not found!");
         }
     }
-
-
-//    public List<ReviewEntity> getAllReviews(String pizzaId) {
-//        return reviewRepository.findAllReviewsByPizzaId(pizzaId);
-//    }
 }
