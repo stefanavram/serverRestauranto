@@ -7,9 +7,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-/**
- * @author Stefan Avram
- */
 @Entity
 @Table(name = "review")
 public class ReviewEntity extends BaseEntity {

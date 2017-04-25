@@ -5,9 +5,6 @@ import ro.irian.fullstack.pizza.domain.Review;
 import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
 import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 
-/**
- * @author Cristi Toth
- */
 public class PizzaTransformer {
 
     public static PizzaEntity transformToEntity(Pizza pizza) {

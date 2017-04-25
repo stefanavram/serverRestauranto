@@ -73,7 +73,7 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>LATEST</version>
+                <version>3.1.0</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -93,7 +93,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-tomcat</artifactId>
                 <version>${spring-boot.version}</version>
-                <scope>provided</scope>
+                <!--<scope>provided</scope>-->
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>

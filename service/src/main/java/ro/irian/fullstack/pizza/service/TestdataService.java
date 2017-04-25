@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.irian.fullstack.pizza.domain.Pizza;
 import ro.irian.fullstack.pizza.domain.Review;
+import ro.irian.fullstack.pizza.service.repository.PizzaRepository;
 
 import static ro.irian.fullstack.pizza.service.transformers.PizzaTransformer.transformToEntity;
 

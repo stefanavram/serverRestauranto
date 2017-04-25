@@ -1,11 +1,10 @@
 package ro.irian.fullstack.pizza.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
-import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 import ro.irian.fullstack.pizza.service.exception.PizzaNotFoundException;
+import ro.irian.fullstack.pizza.service.repository.PizzaRepository;
 
 import java.util.List;
 

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ro.irian.fullstack.pizza.domain.Review;
 import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
+import ro.irian.fullstack.pizza.service.repository.ReviewRepository;
 import ro.irian.fullstack.pizza.service.transformers.ReviewTransformer;
 
 /**

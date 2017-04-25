@@ -1,8 +1,6 @@
 package ro.irian.fullstack.pizza.service.transformers;
 
-import ro.irian.fullstack.pizza.domain.Pizza;
 import ro.irian.fullstack.pizza.domain.Review;
-import ro.irian.fullstack.pizza.domain.entity.PizzaEntity;
 import ro.irian.fullstack.pizza.domain.entity.ReviewEntity;
 
 /**
