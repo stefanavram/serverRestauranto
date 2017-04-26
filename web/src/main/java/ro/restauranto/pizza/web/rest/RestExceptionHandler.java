@@ -1,4 +1,4 @@
-package ro.irian.fullstack.pizza.web.rest;
+package ro.restauranto.pizza.web.rest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
-import ro.irian.fullstack.pizza.service.exception.PizzaNotFoundException;
-import ro.irian.fullstack.pizza.service.exception.ServiceException;
+import ro.restauranto.pizza.service.exception.PizzaNotFoundException;
+import ro.restauranto.pizza.service.exception.ServiceException;
 
 /**
  * Exception handler for Spring rest controllers annotated with {@see RestController}.

@@ -1,4 +1,4 @@
-package ro.irian.fullstack.pizza.web;
+package ro.restauranto.pizza.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
