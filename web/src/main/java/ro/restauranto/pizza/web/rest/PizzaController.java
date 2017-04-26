@@ -52,6 +52,6 @@ public class PizzaController {
     @RequestMapping(value = "/addReservation", method = {RequestMethod.POST})
     public OKResponse addReservation(@RequestBody Reservation reservation) {
         reservationService.addReservation(reservation);
-        return new OKResponse(false);
+        return new OKResponse(true);
     }
 }
