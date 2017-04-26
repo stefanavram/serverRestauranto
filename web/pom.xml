@@ -4,22 +4,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ro.irian.fullstack.spring-jpa</groupId>
-        <artifactId>spring-jpa-example-01</artifactId>
+        <groupId>restauranto.spring-jpa</groupId>
+        <artifactId>spring-jpa-example</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>spring-jpa-example-01-web</artifactId>
+    <artifactId>spring-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>IRIAN Labs - Spring JPA Example 02 - Web</name>
+    <name>Web</name>
 
     <dependencies>
 
         <dependency>
-            <groupId>ro.irian.fullstack.spring-jpa</groupId>
-            <artifactId>spring-jpa-example-01-service</artifactId>
+            <groupId>restauranto.spring-jpa</groupId>
+            <artifactId>spring-service</artifactId>
             <!--<version>0.0.1-SNAPSHOT</version>-->
             <!--<type>war</type>-->
         </dependency>
@@ -63,7 +63,7 @@
 
     <properties>
         <NODE_ENV>production</NODE_ENV>
-        <start-class>ro.irian.fullstack.pizza.web.PizzaSpringApplication</start-class>
+        <start-class>ro.restauranto.pizza.web.PizzaSpringApplication</start-class>
     </properties>
 
     <build>
