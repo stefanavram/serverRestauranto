@@ -4,10 +4,6 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Cristi Toth
- */
-
 @Entity
 @Table(name = "pizza")
 public class PizzaEntity extends BaseEntity {

@@ -2,10 +2,7 @@ package ro.irian.fullstack.pizza.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "review")
@@ -24,6 +21,7 @@ public class ReviewEntity extends BaseEntity {
     @JoinColumn(name = "pizza_id", referencedColumnName = "id")
     private PizzaEntity pizza;
 
+    @PrePersist
     public void prePersist() {
         super.prePersist();
         this.createdOn = System.currentTimeMillis();
