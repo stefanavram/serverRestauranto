@@ -7,7 +7,6 @@ public class ReservationTransformer {
     public static ReservationEntity transformToEntity(Reservation r) {
         ReservationEntity reservationEntity = new ReservationEntity();
 
-        reservationEntity.setId(r.get_id());
         reservationEntity.setName(r.getName());
         reservationEntity.setDate(r.getDate());
         reservationEntity.setHowManyPeople(r.getHowManyPeople());
