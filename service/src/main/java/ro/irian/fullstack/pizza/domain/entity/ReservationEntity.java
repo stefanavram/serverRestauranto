@@ -1,6 +1,7 @@
 package ro.irian.fullstack.pizza.domain.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import java.util.Date;
 
@@ -17,6 +18,11 @@ public class ReservationEntity extends BaseEntity {
     private Date date;
 
     private Integer howManyPeople;
+
+    @PrePersist
+    public void prePersist() {
+        super.prePersist();
+    }
 
     public String getName() {
         return name;

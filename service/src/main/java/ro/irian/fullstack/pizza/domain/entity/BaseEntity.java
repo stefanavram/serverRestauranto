@@ -1,9 +1,6 @@
 package ro.irian.fullstack.pizza.domain.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Version;
+import javax.persistence.*;
 
 /**
  * Base class for all entities.
@@ -19,7 +16,7 @@ public abstract class BaseEntity {
     @Column(name = "version", nullable = false)
     private Long version;
 
-    protected BaseEntity() {
+    public BaseEntity() {
         this.id = UUIDGenerator.next();
     }
 
@@ -39,6 +36,7 @@ public abstract class BaseEntity {
         return version == null;
     }
 
+    @PrePersist
     public void prePersist() {
         if (this.id == null) {
             this.id = UUIDGenerator.next();
