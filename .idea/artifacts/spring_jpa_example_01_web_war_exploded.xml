@@ -62,6 +62,11 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.3" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-jasper:9.0.0.M10" />
+          <element id="library" level="project" name="Maven: org.eclipse.jdt.core.compiler:ecj:4.5.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.0-b05" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.1.7" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.1.7" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.21" />
