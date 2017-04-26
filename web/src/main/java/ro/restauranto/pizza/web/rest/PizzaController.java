@@ -1,6 +1,8 @@
 package ro.restauranto.pizza.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ro.restauranto.pizza.domain.Reservation;
 import ro.restauranto.pizza.domain.Review;
@@ -8,6 +10,7 @@ import ro.restauranto.pizza.domain.entity.PizzaEntity;
 import ro.restauranto.pizza.service.PizzaService;
 import ro.restauranto.pizza.service.ReservationService;
 import ro.restauranto.pizza.service.ReviewService;
+import ro.restauranto.pizza.service.exception.OKResponse;
 
 import java.util.List;
 
@@ -47,8 +50,8 @@ public class PizzaController {
     }
 
     @RequestMapping(value = "/addReservation", method = {RequestMethod.POST})
-    public Boolean addReservation(@RequestBody Reservation reservation) {
+    public OKResponse addReservation(@RequestBody Reservation reservation) {
         reservationService.addReservation(reservation);
-        return true;
+        return new OKResponse(false);
     }
 }
